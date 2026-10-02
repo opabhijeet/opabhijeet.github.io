@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abhijeet Awasthi — Software Engineer</title>
+  <meta name="description" content="Abhijeet Awasthi — Software Development Engineer in Bengaluru. Backend and data-extraction systems, TensorFlow contributor.">
+  <meta property="og:title" content="Abhijeet Awasthi — Software Engineer">
+  <meta property="og:description" content="Backend and data-extraction systems at Buyhatke. Merged a core bug fix into TensorFlow.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5bd3'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #fbfbfa; --surface: #ffffff; --text: #17191c; --muted: #5d636b; --line: #e6e6e3;
+      --accent: #2f5bd3; --accent-soft: #eaf0ff; --code: #f3f3f1; --on-accent: #ffffff;
+      --radius: 12px; --max: 860px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0f1114; --surface: #161a1f; --text: #e9ebee; --muted: #9aa2ad; --line: #262b33;
+        --accent: #7ea1ff; --accent-soft: #1a2440; --code: #1d2228; --on-accent: #0f1114;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0f1114; --surface: #161a1f; --text: #e9ebee; --muted: #9aa2ad; --line: #262b33;
+      --accent: #7ea1ff; --accent-soft: #1a2440; --code: #1d2228; --on-accent: #0f1114;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    header.top {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent); border-bottom: 1px solid var(--line);
+    }
+    header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 12px; }
+    .brand { font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+    nav { display: flex; gap: 18px; align-items: center; font-size: 14px; }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--text); text-decoration: none; }
+    .theme-btn {
+      border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 8px;
+      width: 32px; height: 32px; cursor: pointer; font-size: 15px; line-height: 1;
+    }
+    @media (max-width: 620px) { nav a.hide-sm { display: none; } }
+
+    .hero { padding: 72px 0 40px; }
+    .eyebrow { font: 600 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; }
+    h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; letter-spacing: -0.025em; margin: 14px 0 16px; }
+    .lede { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+    .lede strong { color: var(--text); font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 9px; font-size: 15px;
+      border: 1px solid var(--line); background: var(--surface); color: var(--text); font-weight: 500;
+    }
+    .btn:hover { text-decoration: none; border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+
+    section { padding: 36px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 22px; font-weight: 600; }
+
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+    .card + .card { margin-top: 14px; }
+    .card h3 { margin: 0 0 4px; font-size: 18px; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .tag { font: 12.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--code); color: var(--muted); padding: 6px 8px; border-radius: 6px; }
+    ul.points { margin: 12px 0 0; padding-left: 18px; }
+    ul.points li { margin: 6px 0; }
+    ul.points li::marker { color: var(--accent); }
+    .links { display: flex; gap: 14px; margin-top: 12px; font-size: 14px; font-weight: 500; }
+
+    .feature { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+    .badge { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 3px 8px; border-radius: 999px; margin-bottom: 10px; }
+    code { font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--code); padding: 1px 5px; border-radius: 5px; }
+
+    .role + .role { margin-top: 22px; padding-top: 22px; border-top: 1px dashed var(--line); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .grid .card + .card { margin-top: 0; }
+    .ach { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .ach li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
+    .ach li span:first-child { color: var(--accent); font-weight: 700; }
+    .skills { display: grid; grid-template-columns: 170px 1fr; gap: 10px 18px; }
+    .skills dt { color: var(--muted); font-size: 14px; }
+    .skills dd { margin: 0; }
+    @media (max-width: 560px) { .skills { grid-template-columns: 1fr; } .skills dd { margin-bottom: 8px; } }
+
+    footer { padding: 36px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    footer .row { align-items: center; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#">Abhijeet Awasthi</a>
+      <nav>
+        <a href="#open-source" class="hide-sm">Open source</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="hide-sm">Contact</a>
+        <button class="theme-btn" id="theme" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Software Development Engineer · Bengaluru</div>
+      <h1>I build backend and data-extraction systems that keep working when the web changes.</h1>
+      <p class="lede">
+        SDE at <strong>Buyhatke</strong>, where my work tracks prices, orders and spending across
+        <strong>70+ e-commerce platforms</strong> for millions of users. Open-source contributor to
+        <strong>TensorFlow</strong>. B.Tech CSE, IIIT Bhagalpur (2026).
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:opabhijeet15@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/opabhijeet" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/abhijeet-awasthi-564844256" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <section id="open-source">
+      <h2>Open source</h2>
+      <div class="card feature">
+        <span class="badge">Merged · Sep 2026</span>
+        <div class="row">
+          <h3>TensorFlow — fixed a crash and an integer overflow in <code>UnicodeDecodeWithOffsets</code></h3>
+        </div>
+        <ul class="points">
+          <li>Passing <code>Tsplits=int32</code> crashed the process with a dtype mismatch; mapped the offset values strictly to <code>int64_t</code>.</li>
+          <li>Widened loop counters to <code>int64_t</code> so strings longer than 2.14 billion characters no longer overflow.</li>
+          <li>Added the missing Python unit tests covering <code>Tsplits=int32</code> and the 64-bit offset tensors.</li>
+        </ul>
+        <div class="tags"><span class="tag">C++</span><span class="tag">TensorFlow core</span><span class="tag">bug fix</span><span class="tag">unit tests</span></div>
+        <div class="links"><a href="https://github.com/tensorflow/tensorflow/pull/117891" target="_blank" rel="noopener">tensorflow/tensorflow#117891 →</a></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <div class="role">
+          <div class="row">
+            <h3>Software Development Engineer · Buyhatke</h3>
+            <span class="meta">Mar 2026 – present</span>
+          </div>
+          <ul class="points">
+            <li>Architected a unified order-tracking pipeline for real-time delivery monitoring across 7 major e-commerce platforms, built to keep expanding.</li>
+            <li>Built a selector-independent scraping algorithm that finds product elements on the fly, cutting extraction downtime by 30% on volatile sites.</li>
+            <li>Engineered a Flipkart price-fetching system that parses hidden seller listings to surface the absolute lowest price.</li>
+            <li>Expanded the spend calculator to 35 new platforms with automated tracking and per-site spending insights.</li>
+          </ul>
+        </div>
+        <div class="role">
+          <div class="row">
+            <h3>Software Development Intern · Buyhatke</h3>
+            <span class="meta">Sep 2025 – Feb 2026</span>
+          </div>
+          <ul class="points">
+            <li>Built a high-accuracy extraction system using Web Request listeners and API replication, fixing scraping failures for ~20% of high-traffic SKUs.</li>
+            <li>Shipped an instant price-comparison icon and tooltip in the browser extension, taking price checks from 2 clicks to 0.</li>
+            <li>Integrated 70+ e-commerce sites and 6 quick-commerce platforms; reconfigured 8 vendor pipelines to keep data accurate for millions of users.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Canvasly</h3>
+          <div class="meta">Real-time collaborative whiteboard</div>
+          <p>Multi-user drawing and sticky notes with under 50&nbsp;ms sync latency, plus role-based access control.</p>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Liveblocks</span><span class="tag">Convex</span><span class="tag">Clerk</span></div>
+          <div class="links">
+            <a href="https://canvasly-abhi.vercel.app" target="_blank" rel="noopener">Live →</a>
+            <a href="https://github.com/opabhijeet/Canvasly" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>CleanVision</h3>
+          <div class="meta">Cleanliness compliance platform</div>
+          <p>Processes live camera input and alerts local authorities by email and SMS within a minute of a detected violation, with a dashboard of 10+ metrics.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Express</span><span class="tag">FastAPI</span><span class="tag">Firebase</span></div>
+          <div class="links">
+            <a href="https://clean-vision.vercel.app" target="_blank" rel="noopener">Live →</a>
+            <a href="https://github.com/opabhijeet/CleanVision" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul class="ach">
+        <li><span>01</span><span><strong>Smart India Hackathon 2024 finalist</strong> — top 1.5% of 86,000+ teams.</span></li>
+        <li><span>02</span><span><strong>Winner, Code Relay 3.0</strong> (IIT Bhubaneswar) — 1st of 882 teams, AI-driven prototype.</span></li>
+        <li><span>03</span><span><strong>ISRO Robotics Challenge (IRoC-U) pre-finalist</strong> — top 10% of teams nationally.</span></li>
+        <li><span>04</span><span><strong>LeetCode Knight</strong> (peak 1912, rank 757 of 29,000+) · <strong>CodeChef 3★</strong> (max 1635).</span></li>
+        <li><span>05</span><span><strong>Club Lead, PyC</strong> (IIIT Bhagalpur) — ran 3 coding competitions with 1,000+ participants and workshops for 300+ students.</span></li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>C++, C, JavaScript, TypeScript, SQL</dd>
+        <dt>Frameworks &amp; tools</dt><dd>Node.js, React.js, Next.js, Git, Postman</dd>
+        <dt>Databases</dt><dd>MySQL, PostgreSQL, MongoDB, Firebase, Convex</dd>
+        <dt>Foundations</dt><dd>Data structures &amp; algorithms, OOP, DBMS, operating systems</dd>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="row">
+        <div><strong>B.Tech, Computer Science and Engineering</strong><div class="meta">Indian Institute of Information Technology, Bhagalpur · CGPA 8.88</div></div>
+        <span class="meta">2022 – 2026</span>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap row">
+      <span>Open to SDE roles · <a href="mailto:opabhijeet15@gmail.com">opabhijeet15@gmail.com</a></span>
+      <span><a href="https://github.com/opabhijeet" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/abhijeet-awasthi-564844256" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement, btn = document.getElementById("theme");
+      try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+      btn.addEventListener("click", function () {
+        var dark = root.getAttribute("data-theme")
+          ? root.getAttribute("data-theme") === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var next = dark ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
